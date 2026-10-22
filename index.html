@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre por qué los deportes son importantes para la salud, la convivencia y el desarrollo personal.">
+  <title>La importancia de los deportes</title>
+  <style>
+    :root {
+      --navy: #102a43;
+      --green: #1e9b67;
+      --lime: #d7f36b;
+      --orange: #ff914d;
+      --cream: #fffaf0;
+      --ink: #183044;
+      --muted: #526575;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--cream); line-height: 1.6; }
+    a { color: inherit; }
+    .topbar { background: var(--navy); color: white; padding: 14px 6%; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .brand { font-weight: 900; letter-spacing: .3px; }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: 650; font-size: .95rem; }
+    nav a:hover { color: var(--lime); }
+    .hero { background: linear-gradient(120deg, rgba(16,42,67,.95), rgba(30,155,103,.82)), url('https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1800&q=85') center/cover; color: white; padding: 88px 6% 92px; }
+    .hero-content { max-width: 850px; }
+    .eyebrow { color: var(--lime); text-transform: uppercase; letter-spacing: 2px; font-weight: 800; font-size: .82rem; }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.03; margin: 14px 0 22px; max-width: 800px; }
+    .hero p { font-size: clamp(1.05rem, 2vw, 1.3rem); max-width: 650px; color: #f1f8f4; }
+    .button { display: inline-block; margin-top: 18px; background: var(--lime); color: var(--navy); padding: 13px 21px; border-radius: 999px; font-weight: 850; text-decoration: none; box-shadow: 0 6px 0 rgba(0,0,0,.12); }
+    .button:hover { transform: translateY(-2px); }
+    section { padding: 68px 6%; }
+    .section-heading { max-width: 750px; margin: 0 auto 34px; text-align: center; }
+    .section-heading h2 { color: var(--navy); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 8px 0 12px; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; max-width: 1150px; margin: auto; }
+    .card { background: white; border-radius: 22px; overflow: hidden; box-shadow: 0 10px 28px rgba(16,42,67,.08); transition: transform .2s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 205px; object-fit: cover; display: block; }
+    .card-body { padding: 22px; }
+    .emoji { font-size: 1.7rem; }
+    .card h3 { color: var(--navy); margin: 8px 0; font-size: 1.3rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .types { background: #eaf7ed; }
+    .type-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; max-width: 1100px; margin: auto; }
+    .type { text-align: center; background: white; padding: 22px 12px; border-radius: 18px; font-weight: 800; color: var(--navy); }
+    .type span { display: block; font-size: 2rem; margin-bottom: 6px; }
+    .quote { background: var(--orange); color: var(--navy); text-align: center; padding: 48px 6%; }
+    .quote blockquote { max-width: 850px; margin: 0 auto; font-size: clamp(1.5rem, 3.5vw, 2.5rem); font-weight: 900; line-height: 1.25; }
+    .quote p { margin-bottom: 0; font-weight: 700; }
+    .tips { max-width: 900px; margin: auto; background: white; border-radius: 24px; padding: clamp(24px, 5vw, 42px); box-shadow: 0 10px 28px rgba(16,42,67,.07); }
+    .tips h2 { margin-top: 0; color: var(--navy); }
+    .tips li { margin: 10px 0; padding-left: 5px; }
+    .callout { background: var(--navy); color: white; text-align: center; }
+    .callout h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 12px; }
+    .callout p { max-width: 700px; margin: auto; color: #e1eaf0; }
+    footer { background: #091d2d; color: #dce7ed; padding: 24px 6%; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .9rem; }
+    footer p { margin: 0; }
+    @media (max-width: 800px) { .cards { grid-template-columns: 1fr 1fr; } .type-list { grid-template-columns: 1fr 1fr; } .hero { padding-top: 65px; } }
+    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } .card img { height: 220px; } nav { gap: 12px; } section { padding: 52px 5%; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🏅 DEPORTE + VIDA</div>
+    <nav aria-label="Navegación principal">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#deportes">Deportes</a>
+      <a href="#consejos">Consejos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Actívate · Aprende · Comparte</div>
+        <h1>La importancia de los deportes</h1>
+        <p>El deporte nos ayuda a cuidar nuestro cuerpo, fortalecer la mente y aprender valores que nos acompañan dentro y fuera de la cancha.</p>
+        <a class="button" href="#beneficios">Descubre sus beneficios ↓</a>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="section-heading">
+        <div class="eyebrow" style="color:#1e9b67">Mucho más que jugar</div>
+        <h2>¿Por qué es importante practicar deporte?</h2>
+        <p>La actividad física regular puede formar parte de una vida equilibrada y ayudarnos a conectar con otras personas.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=80" alt="Persona corriendo al aire libre">
+          <div class="card-body"><div class="emoji">💪</div><h3>Salud física</h3><p>Ayuda a desarrollar fuerza, resistencia, coordinación y hábitos activos que benefician al cuerpo.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80" alt="Personas haciendo ejercicio">
+          <div class="card-body"><div class="emoji">🧠</div><h3>Bienestar emocional</h3><p>Moverse puede mejorar el ánimo, aliviar el estrés y ofrecer un descanso de las preocupaciones diarias.</p></div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" alt="Equipo deportivo jugando en una cancha">
+          <div class="card-body"><div class="emoji">🤝</div><h3>Amistad y respeto</h3><p>Enseña a colaborar, comunicarse, respetar reglas y valorar tanto el esfuerzo propio como el de los demás.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="types" id="deportes">
+      <div class="section-heading">
+        <div class="eyebrow" style="color:#1e9b67">Hay una opción para cada persona</div>
+        <h2>¡Encuentra tu deporte!</h2>
+        <p>Lo importante es elegir una actividad que disfrutes y practicarla de forma segura.</p>
+      </div>
+      <div class="type-list">
+        <div class="type"><span>⚽</span>Fútbol</div>
+        <div class="type"><span>🏀</span>Baloncesto</div>
+        <div class="type"><span>🏊</span>Natación</div>
+        <div class="type"><span>🚴</span>Ciclismo</div>
+        <div class="type"><span>🏐</span>Voleibol</div>
+        <div class="type"><span>🏃</span>Atletismo</div>
+        <div class="type"><span>🥋</span>Artes marciales</div>
+        <div class="type"><span>💃</span>Baile</div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <blockquote>“Lo importante no es ganar siempre, sino aprender, esforzarse y disfrutar el camino.”</blockquote>
+      <p>El verdadero espíritu deportivo</p>
+    </section>
+
+    <section id="consejos">
+      <div class="tips">
+        <h2>🌟 Consejos para empezar</h2>
+        <ul>
+          <li>Elige una actividad que te divierta y se adapte a tus intereses.</li>
+          <li>Comienza poco a poco y aumenta la actividad según te sientas cómodo.</li>
+          <li>Calienta antes de empezar y sigue las indicaciones de tu entrenador o docente.</li>
+          <li>Toma agua, descansa y usa el equipo de protección adecuado.</li>
+          <li>Respeta a tus compañeros, rivales, árbitros y las reglas del juego.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>¡Cada movimiento cuenta!</h2>
+      <p>El deporte puede unir comunidades, crear amistades y ayudarnos a descubrir lo que somos capaces de lograr. Busca una actividad que te guste y disfruta de mantenerte activo.</p>
+      <a class="button" href="#inicio" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Volver al inicio ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>🏅 La importancia de los deportes</p>
+    <p>Proyecto educativo · Hecho para aprender y compartir</p>
+  </footer>
+</body>
+</html>
